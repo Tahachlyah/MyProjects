@@ -1,0 +1,250 @@
+*{ font-family: 'Raleway';
+
+}
+
+.flex_header{
+    display: flex; justify-content: space-between;
+}
+
+.flex-header{ 
+    border: 2px solid blue; justify-content: center;
+}
+
+/* modifier les liens  */
+a{
+    text-decoration: none; color: black;
+}
+nav > a:hover{
+    color: blue ;border-top: 2px solid blue
+}
+a:nth-child(1){padding: 5px; 
+    }
+a:nth-child(2){padding: 5px;
+    }
+a:nth-child(3){padding: 5px;
+   }
+/* section introduction */
+/* barre de recherche  */
+
+
+
+.filtres{
+    display: flex;
+     margin: 20px 20px 20px 0px ;
+    
+}
+
+#filtre{
+
+    text-align: center;
+     margin-left: 5px ; 
+     margin-right: 15px ;
+     border-radius:  50px;
+     padding: 10px 10px 10px 10px;
+     
+}
+
+.filtres_element { 
+    border: 1px solid black;
+    text-align: center;
+     margin-left: 5px ; 
+     margin-right: 15px ;
+     border-radius:  50px;
+     border: 2px solid #D9D9D9;
+}
+
+.filtres i {
+    text-align: center;
+    border-radius:  50px;
+    padding: 10px 10px 10px 10px;
+    background-color: #DEEBFF;
+
+    
+}
+
+ .form input{ 
+    height: 30px;
+    margin-left: -4px;
+    border: none;
+}
+.form i {
+    padding: 8px;
+}
+
+/* fitre  */
+/*  
+.search-container{
+    border: 1px solid black;
+   
+}
+
+.fa-location-dot{
+    border: 1px solid brown;
+    text-align: center; 
+      
+}
+
+.search-container input {
+
+}
+*/
+
+
+
+
+.recherche {
+    border: none;
+    width: fit-content;
+    margin: 20px 20px 20px 0px ;
+    border-radius: 25px 20px 20px 25px;
+    
+}
+.bouttonrechercher { 
+    margin-top: none;
+    border: none;
+    color: white;
+     background-color: blue; 
+     border: none;
+     border-radius: 0px 20px 20px 0px;
+     padding: 10px ;
+     height: 38px;
+
+}
+
+.recherche input { 
+    height: 34px;
+    margin-left: -4px;
+    margin-right: -4px;
+    border: none;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+}
+.recherche i{
+    border: none ;
+    background-color: #F2F2F2;
+    padding: 9px;
+    padding-right: 15px;
+    border-radius:  25px 0px 0px 25px;
+    height: 20px;
+}
+.fa-info{
+    border: 1px solid #F2F2F2;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    text-align:center;
+}
+/*  
+.localisation{
+    border-radius: 20px 0px 0px 20px;
+    height: 25px;
+    width: 15px;
+}
+*/
+
+.flex_hebergement {
+    display: flex; 
+    justify-content: space-around;
+}
+
+.hebmars{ 
+    background-color: #F2F2F2; 
+    border-radius: 15px;
+    padding-left: 20px;
+     
+}
+
+.hebmars_element{  
+     display: flex; 
+    
+    justify-content: space-around; 
+} 
+
+.hebmars_element1,.hebmars_element2, .hebmars_element3 {
+    border: 2px solid white;
+     border-radius: 25px;
+      margin: 25px;
+       background-color: white;
+       
+}
+
+ .hebmars_element img 
+ {
+    border-radius: 25px 25px 0px 0px;
+     width:200px; 
+      height:120px; 
+   
+}
+
+/* -----------les plus populaires------------------------- */
+.hebpluspop_element{  
+    background-color: #F2F2F2; 
+    border-radius: 15px;
+    padding-left: 20px;
+}
+.hebpluspop_element1,.hebpluspop_element2, .hebpluspop_element3 {
+
+     border-radius: 25px;
+      margin: 25px;
+      height: 137px;
+      background-color: white;
+      padding: 4px;
+     display: flex;
+     flex-direction: row;
+}
+
+.hebpluspop_element img { 
+  
+    border-radius: 25px 0px 0px 25px; 
+    /* float: left; */
+   
+    width:128px;
+     height:137px;
+     
+    
+}
+
+/* ----------------activités marseille------------- */
+.flex-activitemars { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+
+.activitemars_element1,.activitemars_element2,.activitemars_element3,.activitemars_element4, .activitemars_element5, .activitemars_element6 { 
+    border: 2px solid #F2F2F2; 
+    border-radius: 25px;
+     padding-bottom: 15px ;
+     margin-bottom: 10px;
+     box-shadow: 2px 2px 2px 1px #F2F2F2;
+      display: flex;
+     flex-direction: column; 
+   
+}
+
+.flex-activitemars img { 
+ border-radius: 25px 25px 0px 0px ;
+ 
+ 
+ 
+ 
+}
+
+/* ----------------footer------------------- */
+.flex_footer { 
+    display: flex; 
+    justify-content: space-between ;
+    background-color: #F2F2F2;
+    width: 100%;
+   
+}
+
+.fa-solid{ color: blue;}
+.grey { color: gray;}
+
+ul
+{ 
+    list-style-type: none
+} 
+

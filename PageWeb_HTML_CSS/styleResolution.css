@@ -1,0 +1,94 @@
+ .flex_header{
+    display: flex; flex-wrap: wrap;
+} 
+.filtres{
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+/* * */
+.hebmars_element
+{
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+
+.hebmars_element1,.hebmars_element2, .hebmars_element3{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.hebmars_element img 
+ {
+    width: 100%; 
+ 
+}
+
+/* .hebpluspop_element1,.hebpluspop_element2, .hebpluspop_element3
+ {
+    display: flex;
+     flex-direction: column; 
+    width: 90%
+} */
+
+.hebpluspop_element 
+ {
+    padding-right: 10px;
+}
+
+
+.flex_hebergement{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.flextextimg{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start ;
+    width: 65%;
+   
+    
+}
+#merde{
+    margin-block-start: -20px;
+}
+
+.activitemars_element1,.activitemars_element2,.activitemars_element3,.activitemars_element4, .activitemars_element5, .activitemars_element6
+ { 
+    text-align: center;
+    /* padding-bottom: 15px ;
+     margin-bottom: 10px; */
+     width: 350px;
+     
+    }
+
+.activitemars_element2,.activitemars_element3,.activitemars_element5, .activitemars_element6
+    
+    { 
+
+    }
+
+    .flex-activitemars { 
+        clear:both;
+        display: flex; 
+        flex-direction: column;   
+    }
+
+    .flex-activitemars img { 
+        border-radius: 25px 25px 0px 0px ;
+        width: 100%;
+        height: 150px
+        
+       }
+
+    .flex_footer { 
+        flex-direction: column;
+        background-color: #F2F2F2;
+        padding-left: 20px ;
+        
+    
+    }
