@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trouver votre Montagne{% endblock %}
+
+{% block body %}
+    <img src="images/beautiful-panoramic-shot-of-snow-covered-mountain-ranges-under-clear-blue-sunny-sky.jpg" height="600" width='100%' alt="">
+
+    <div class="container" id="bg-color">
+        <div class="row">
+            {% for article in articles %}
+                <div class="col-3">
+                    <div class="card m-1">
+                        <img src="{{ asset('images/' ~ article.image) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.content|slice(0, 100) }}...</p>
+                            <a href="{{ path('app_user_article_show', {'id': article.id}) }}" class="btn btn-primary">Voir détail</a>
+                        </div>
+                    </div>
+                </div>
+                {% if loop.index % 4 == 0 %}
+                    </div>
+                    <div class="row">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+.carousel-inner {
+    
+    width: fit-content;
+    margin: auto;
+
+  }
+
+  body {
+
+    background-color: #EDE9EA !important; 
+    
+}
+.card-img-top {
+  height: 280px;
+}
