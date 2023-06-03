@@ -1,0 +1,200 @@
+/*******Importer la police liberation*******/
+@font-face {
+    font-family: "Liberation";
+    src: url("/fonts/LiberationSans-Regular-webfont.ttf") format("ttf"),
+        url("/fonts/LiberationSans-Bold-webfont.ttf") format("ttf");
+}
+
+/*******appliquer la police liberation*******/
+body {
+    font-family: "Liberation",
+}
+
+/*******Web responsive*******/
+
+@media screen and (max-width: 576px) {
+    body {
+        background-color: yellow;
+    }
+
+    nav-bonjourjulien {
+        position: unset !important;
+
+    }
+
+    .bonjourjulien {
+        position: unset !important;
+        text-align: start;
+    }
+
+    header nav {
+        position: unset !important;
+    }
+
+    .footerpartie1 {
+        font-size: 0.7rem !important;
+    }
+
+    .navbarenbas {
+        left: 0% !important;
+        right: 0% !important;
+    }
+
+}
+
+/************Style de la page ************/
+
+body {
+    background-image: url("/images/background.jpg");
+}
+
+/* ****************Header**************** */
+nav-bonjourjulien {
+    position: relative;
+}
+
+.bonjourjulien {
+    position: absolute;
+    top: 0px;
+    right: 115px;
+
+}
+
+header nav {
+    position: absolute;
+    top: 85px;
+    right: 90px;
+}
+
+header nav a {
+    margin-right: 25px;
+}
+
+/* ****************body*************** */
+
+
+.couleurdefond,
+section {
+    background-color:
+        #1c1c1c;
+
+}
+
+
+.couleurDefonArticles {
+    background-color: #f3f3f3;
+    padding-bottom: 100px;
+}
+
+.article {
+    position: relative;
+}
+
+.reductions {
+    background-color: #292929;
+    width: fit-content;
+    color: #df980a;
+    position: absolute;
+    top: -5px;
+    right: 80px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+
+}
+
+.description {
+    position: relative;
+    bottom: 38px;
+    left: 0px;
+}
+
+.button-prix {
+
+    margin-left: 100px;
+    width: fit-content;
+    margin-top: -20px;
+    position: absolute;
+    bottom: 10;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.premierprix {
+    color: black;
+    text-decoration: line-through;
+    font-size: 1.5em;
+
+}
+
+.secondprix {
+    color: #df980a;
+    text-decoration: bold !important;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* ****************footer*************** */
+footer {
+    background-color:
+        #373737;
+}
+
+.footerpartie1 {
+    color: #f3f3f3;
+    font-size: 1rem;
+    border-bottom: solid #7d7d7d;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.footerpartie2 {
+    padding-top: 20px;
+
+
+}
+
+/* ****************barreDeNavigationEnBas*************** */
+.navbarenbas {
+    position: absolute;
+    top: -1rem;
+    left: 30%;
+    right: 30%;
+
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.copyright {
+    color: white;
+    margin-top: 7px;
+    font-size: 0.7rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+}
+
+.footerpartie2 img {
+    width: auto !important;
+    height: 90% !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+
+}
