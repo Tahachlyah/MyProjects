@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	{# l'inscription se fait en deux étapes la première se deroule dans  #}
+{# 
+	<h1>InternshipOffer index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Title</th>
+				<th>CreateAt</th>
+				<th>Start_date</th>
+				<th>End_date</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for internship_offer in internship_offers %}
+				<tr>
+					<td>{{ internship_offer.id }}</td>
+					<td>{{ internship_offer.title }}</td>
+					<td>{{ internship_offer.createAt ? internship_offer.createAt|date('Y-m-d H:i:s') : '' }}</td>
+					<td>{{ internship_offer.startDate ? internship_offer.startDate|date('Y-m-d H:i:s') : '' }}</td>
+					<td>{{ internship_offer.endDate ? internship_offer.endDate|date('Y-m-d H:i:s') : '' }}</td>
+					<td>
+						<a href="{{ path('app_internship_offer_show', {'id': internship_offer.id}) }}">show</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="6">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table> #}
+
+	<div class="container">
+		<h1 class="text-center">Offres de stage</h1>
+		<div class="list-group">
+
+
+			{% for internship_offer in internship_offers %}
+				<div href="{{ path('app_internship_offer_show', {'id': internship_offer.id}) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+					<div class="d-flex w-100 justify-content-between">
+						<h5 class="mb-1">{{ internship_offer.title }}</h5>
+						<a href='{{ path('app_application_new') }}'>candidature</a>
+					</div>
+					<p class="mb-1">{{ internship_offer.description }}</p>
+
+                    <div class="d-flex w-100 justify-content-between">
+					<small>Localisation: {{ internship_offer.location }}</small> 
+                    <small>Date de début: {{ internship_offer.startDate  ? internship_offer.startDate|date('Y-m-d ') : ''}}</small>
+                    </div>
+                    <div class="d-flex w-100 justify-content-end mt-5">
+                    <small>Date de création: {{ internship_offer.createAt ? internship_offer.createAt|date('Y-m-d ') : '' }} </small>
+                    </div>
+				</div>
+
+
+			{% else %}
+				<tr>
+					<td colspan="6">no records found</td>
+				</tr>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

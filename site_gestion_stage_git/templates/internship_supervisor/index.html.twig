@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}InternshipSupervisor index{% endblock %}
+
+{% block body %}
+    <h1>InternshipSupervisor index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Post</th>
+                <th>CompanyName</th>
+                <th>Description</th>
+                <th>Field</th>
+                <th>SiretNumber</th>
+                <th>CompanyAdress</th>
+                <th>CompanyPicture</th>
+                <th>PictureDescription</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for internship_supervisor in internship_supervisors %}
+            <tr>
+                <td>{{ internship_supervisor.id }}</td>
+                <td>{{ internship_supervisor.post }}</td>
+                <td>{{ internship_supervisor.companyName }}</td>
+                <td>{{ internship_supervisor.description }}</td>
+                <td>{{ internship_supervisor.field }}</td>
+                <td>{{ internship_supervisor.siretNumber }}</td>
+                <td>{{ internship_supervisor.companyAdress }}</td>
+                <td>{{ internship_supervisor.companyPicture }}</td>
+                <td>{{ internship_supervisor.PictureDescription }}</td>
+                <td>
+                    <a href="{{ path('app_internship_supervisor_show', {'id': internship_supervisor.id}) }}">show</a>
+                    <a href="{{ path('app_internship_supervisor_edit', {'id': internship_supervisor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_internship_supervisor_new') }}">Create new</a>
+{% endblock %}

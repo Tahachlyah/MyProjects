@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Duration{% endblock %}
+
+{% block body %}
+    <h1>Edit Duration</h1>
+
+    {{ include('duration/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_duration_index') }}">back to list</a>
+
+    {{ include('duration/_delete_form.html.twig') }}
+{% endblock %}

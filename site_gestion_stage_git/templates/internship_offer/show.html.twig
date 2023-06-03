@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}InternshipOffer{% endblock %}
+
+{% block body %}
+dans la show.html.twig
+    <h1>InternshipOffer</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ internship_offer.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ internship_offer.title }}</td>
+            </tr>
+            <tr>
+                <th>CreateAt</th>
+                <td>{{ internship_offer.createAt ? internship_offer.createAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Start_date</th>
+                <td>{{ internship_offer.startDate ? internship_offer.startDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>End_date</th>
+                <td>{{ internship_offer.endDate ? internship_offer.endDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_my_account') }}">back to list</a>
+
+    <a href="{{ path('app_internship_offer_edit', {'id': internship_offer.id}) }}">edit</a>
+
+    {{ include('internship_offer/_delete_form.html.twig') }}
+{% endblock %}

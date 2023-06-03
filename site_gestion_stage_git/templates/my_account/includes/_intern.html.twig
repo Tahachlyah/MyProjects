@@ -1,0 +1,41 @@
+
+{% if app.user and app.user.completeData == false  %}
+<a href="{{path("app_intern_new")}}">completer les données</a>
+{% endif %}
+
+Bonjour {{ app.user.firstName }} {{ app.user.LastName }} 
+<br>
+<br>
+Vous etes un {{ app.user.function }}
+
+
+{# <a href="{{ path('app_application_new') }}">voir mes candidatures</a> #}
+<table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>CreateAt</th>
+                <th>Start_date</th>
+                <th>End_date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {# {% for application in app.user.intern.applications %}
+            <tr>
+                <td>{{ internship_offer.id }}</td>
+                <td>{{ internship_offer.title }}</td>
+                <td>{{ internship_offer.createAt ? internship_offer.createAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ internship_offer.startDate ? internship_offer.startDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ internship_offer.endDate ? internship_offer.endDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_internship_offer_show', {'id': internship_offer.id}) }}">show</a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %} #}
+        </tbody>
+    </table>

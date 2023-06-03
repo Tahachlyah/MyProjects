@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MyAccountController!{% endblock %}
+
+{% block body %}
+ 
+  
+
+
+		
+		{% if app.user.function == "internship_supervisor" %}
+			{% include "my_account/includes/_internship_supervisor.html.twig" %}
+		{% endif %}
+		{% if app.user.function == "intern" %}
+			
+			{% include "my_account/includes/_intern.html.twig" %}
+		{% endif %}
+		{% if app.user.function == "sponsor" %}
+		
+			{% include "my_account/includes/_sponsor.html.twig" %}
+		{% endif %}
+
+	
+  
+{% endblock %}

@@ -1,0 +1,42 @@
+je suis dans internship_supervisor.html.twig
+{% if app.user and app.user.completeData == false  %}
+<a href="{{path("app_internship_supervisor_new")}}">completer les données</a>
+
+{% endif %}
+<br>
+Bonjour {{ app.user.firstName }} {{ app.user.LastName }} 
+<br>
+<br>
+Bienvenu à l'espace des {{ app.user.function }}
+
+ <a href="{{ path('app_internship_offer_new') }}">Create new</a>
+
+ <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>CreateAt</th>
+                <th>Start_date</th>
+                <th>End_date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for internship_offer in app.user.internshipSupervisor.internshipOffers %}
+            <tr>
+                <td>{{ internship_offer.id }}</td>
+                <td>{{ internship_offer.title }}</td>
+                <td>{{ internship_offer.createAt ? internship_offer.createAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ internship_offer.startDate ? internship_offer.startDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ internship_offer.endDate ? internship_offer.endDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_internship_offer_show', {'id': internship_offer.id}) }}">show</a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

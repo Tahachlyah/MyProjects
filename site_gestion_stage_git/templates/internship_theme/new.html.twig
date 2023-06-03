@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New InternshipTheme{% endblock %}
+
+{% block body %}
+    <h1>Create new InternshipTheme</h1>
+
+    {{ include('internship_theme/_form.html.twig') }}
+
+    <a href="{{ path('app_internship_theme_index') }}">back to list</a>
+{% endblock %}
